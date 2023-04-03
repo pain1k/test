@@ -1,0 +1,57 @@
+.input{
+  border-radius: 3px;
+  background-color: rgba(255,255,255,.85);
+  color: $input-color;
+  padding: 12px 10px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Lato";
+  width: 100%;
+  max-width: 370px;
+}
+.select{
+  background-color: rgba(255,255,255,.85);
+  height: 48px;
+  font-family: "Lato";
+  color: $input-color;
+  padding: 12px 10px;
+  border-radius: 3px;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) 21px;
+  background-size: 0.85em auto;
+  background-image: url("../../static/img/drdwn.svg");
+  width: 100%;
+  max-width: 370px;
+}
+.range{
+  width: 100%;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,.7);
+  border: 1px solid $white;
+  height: 6px;
+  appearance: none;
+  margin-top: 20px;
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 37px;
+    border-radius: 30px;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 37px;
+    width: 26px;
+    background: url('../../static/img/thumb.svg') center no-repeat;
+    cursor: default;
+  }
+  &::-moz-range-thumb{
+    cursor: default;
+    height: 37px;
+    width: 37px;
+    background: url('../../static/img/thumb.svg') center no-repeat;
+    border: none;
+  }
+}

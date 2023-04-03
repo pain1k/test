@@ -1,0 +1,53 @@
+.main{
+  background: url('../../static/img/bg.png');
+  background-position: center;
+  background-size: cover;
+  padding-top: 203px;
+  padding-bottom: 202px;
+  @media(max-width: 767px){
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  &__title{
+    color: $black;
+    max-width: 780px;
+    margin-bottom: 80px;
+    @media(max-width: 767px){
+      margin-bottom: 30px;
+    }
+    span{
+      color: $blue;
+    }
+  }
+  &__subtitle{
+    margin-bottom: 80px;
+    @media(max-width: 767px){
+      margin-bottom: 30px;
+    }
+    .subtitle{
+      margin-bottom: 10px;
+    }
+    &-item{
+      position: relative;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+      padding-left: 25px;
+      &:before{
+        content: url('../../static/img/pre.svg');
+        height: 22px;
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        transform: translate(25px,-50%);
+      }
+    }
+  }
+  &__btns{
+    display: flex;
+    flex: 1;
+    .btn:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+}

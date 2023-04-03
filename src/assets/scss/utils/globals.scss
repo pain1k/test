@@ -1,0 +1,103 @@
+@import "../UI/btn";
+@import "../UI/inputs";
+html {
+  height: 100%;
+  font-family: 'Lato';
+  font-size: 13px;
+  line-height: 15px;
+}
+*{
+  scrollbar-color: $blue rgba(61, 64, 80, 1);
+  scrollbar-width:thin;
+  &::-webkit-scrollbar{
+    width:6px;
+    height:8px;
+  }
+  &::-webkit-scrollbar-track{
+    background-color:rgba(61, 64, 80, 1);
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $blue;
+    border-radius: 3px;
+  }
+}
+
+a,
+a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.title{
+  font-size: 48px;
+  line-height: 57.6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  &--small{
+    font-size: 36px;
+    line-height: 43.2px;
+    color: $white;
+    text-transform: uppercase;
+  }
+  @media(max-width: 767px){
+    font-size: 36px;
+    line-height: 43px;
+    &--small{
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+.subtitle{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  &--small{
+    font-size: 18px;
+    line-height: 21.6px;
+    color: $special-gray;
+  }
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+}
+.divider{
+  position: absolute;
+  top: 50px;
+  right: calc(50% + 54px);
+  width: calc(100% - 118px);
+  height: 6px;
+  background: url('../../static/img/dot.svg');
+  background-size: 26px;
+  background-repeat: repeat-x;
+  @media(max-width: 767px){
+    right: calc(50% + 32px);
+    top: 35px;
+    width: calc(100% - 77px);
+  }
+  @media(max-width: 600px){
+    right: calc(50% + 38px);
+    width: calc(100% - 93px);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+  @media(max-width: 1200px){
+    max-width: 900px;
+  }
+}
+.hidden{
+  display: none;
+}
