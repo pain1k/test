@@ -4,7 +4,7 @@
   background-size: cover;
   padding-top: 203px;
   padding-bottom: 202px;
-  @media(max-width: 767px){
+  @media($mobile){
     padding-top: 150px;
     padding-bottom: 100px;
   }
@@ -43,10 +43,19 @@
       }
     }
   }
-  .wrapper{
-    flex: 1;
+}
+.btns{
+  &__wrapper{
     .btn:not(:last-child){
       margin-right: 30px;
+    }
+    @media($mobile-mini){
+      flex-direction: column;
+      align-items: flex-start;
+      .btn:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 }
