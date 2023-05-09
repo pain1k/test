@@ -13,7 +13,6 @@
   &__title{
     text-align: center;
     margin-bottom: 30px;
-    color: $white;
     span{
       color: $blue;
     }
@@ -32,18 +31,37 @@
 .item{
   width: 100%;
   position: relative;
+
   &:first-child {
-    .divider {
+    .item__divider {
       display: none;
     }
   }
   @media(max-width: 600px){
     max-width: 47%;
-    margin-bottom: 20px;
     &:nth-child(odd){
-      .divider{
+      .item__divider{
         display: none;
       }
+    }
+  }
+  &__divider{
+    position: absolute;
+    top: 50px;
+    right: calc(50% + 54px);
+    width: calc(100% - 118px);
+    height: 6px;
+    background: url('../../static/img/dot.svg');
+    background-size: 26px;
+    background-repeat: repeat-x;
+    @media ($mobile) {
+      right: calc(50% + 32px);
+      top: 35px;
+      width: calc(100% - 77px);
+    }
+    @media($mobile-mini){
+      right: calc(50% + 38px);
+      width: calc(100% - 93px);
     }
   }
   &__img{
@@ -84,9 +102,14 @@
       justify-content: center;
     }
   }
+  &__item{
+    @media(max-width: 600px){
+      margin-bottom: 20px;
+    }
+  }
 }
 .feedback {
-  input {
+  &__input {
     &:not(:last-child) {
       margin-right: 30px;
       @media(max-width: 767px){
@@ -102,7 +125,7 @@
       margin-right: 10px;
     }
   }
-  .wrapper{
+  &__wrapper{
     &:not(:last-child){
       margin-bottom: 30px;
     }
@@ -118,8 +141,6 @@
   }
 }
 .range__wrapper{
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 770px;

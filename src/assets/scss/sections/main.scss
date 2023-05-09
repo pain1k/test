@@ -19,7 +19,7 @@
       color: $blue;
     }
   }
-  &__subtitle{
+  &__subtitle-block{
     margin-bottom: 80px;
     @media(max-width: 767px){
       margin-bottom: 30px;
@@ -43,8 +43,7 @@
       }
     }
   }
-  &__btns{
-    display: flex;
+  .wrapper{
     flex: 1;
     .btn:not(:last-child){
       margin-right: 30px;
